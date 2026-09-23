@@ -158,11 +158,54 @@ button:hover {
         ❤️ Başvuruyu Gönder
       </button>
 
-    </form>
+    <form id="basvuruFormu">
+
 
   </div>
 
 </div>
+<script>
+const form = document.getElementById("basvuruFormu");
+
+form.addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const button = form.querySelector("button");
+  button.disabled = true;
+  button.textContent = "Gönderiliyor...";
+
+  const data = {
+    isim: form.querySelectorAll("input")[0].value,
+    soyisim: form.querySelectorAll("input")[1].value,
+    gmail: form.querySelectorAll("input")[2].value,
+    telefon: form.querySelectorAll("input")[3].value,
+    instagram: form.querySelectorAll("input")[4].value
+  };
+
+  try {
+    const response = await fetch("/api/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    });
+
+    if (!response.ok) {
+      throw new Error("Gönderilemedi");
+    }
+
+    alert("❤️ Başvurun başarıyla gönderildi!");
+    form.reset();
+
+  } catch (error) {
+    alert("Bir hata oluştu. Lütfen tekrar deneyin.");
+  }
+
+  button.disabled = false;
+  button.textContent = "❤️ Başvuruyu Gönder";
+});
+</script>
 
 </body>
 </html>
