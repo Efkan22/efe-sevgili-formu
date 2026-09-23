@@ -1,1 +1,169 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Efe Özcan'a Sevgili Bulma Formu</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ff416c, #ff758c);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  width: 900px;
+  max-width: 100%;
+  display: flex;
+  background: white;
+  border-radius: 25px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px #0003;
+}
+
+.left {
+  width: 45%;
+  padding: 55px 40px;
+  color: white;
+  background: linear-gradient(160deg, #ff416c, #ff4b2b);
+}
+
+.heart {
+  font-size: 60px;
+}
+
+.left h1 {
+  font-size: 38px;
+}
+
+.left p {
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.right {
+  width: 55%;
+  padding: 45px;
+}
+
+h2 {
+  color: #333;
+}
+
+.group {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  color: #444;
+}
+
+input {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #ddd;
+  border-radius: 9px;
+  font-size: 15px;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  border: 0;
+  border-radius: 9px;
+  background: #ff416c;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #e9325a;
+}
+
+@media (max-width: 700px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <div class="left">
+    <div class="heart">❤️</div>
+
+    <h1>Efe Özcan'a Sevgili Bulma Formu</h1>
+
+    <p>
+      Efe Özcan'ın hayatına renk katacak kişiyi arıyoruz!
+      Formu doldur ve başvurunu gönder. 😎
+    </p>
+  </div>
+
+  <div class="right">
+
+    <h2>Başvuru Formu</h2>
+
+    <form>
+
+      <div class="group">
+        <label>İsim</label>
+        <input type="text" placeholder="İsminiz" required>
+      </div>
+
+      <div class="group">
+        <label>Soyisim</label>
+        <input type="text" placeholder="Soyisminiz" required>
+      </div>
+
+      <div class="group">
+        <label>Gmail</label>
+        <input type="email" placeholder="ornek@gmail.com" required>
+      </div>
+
+      <div class="group">
+        <label>Telefon</label>
+        <input type="tel" placeholder="05XX XXX XX XX" required>
+      </div>
+
+      <div class="group">
+        <label>Instagram Kullanıcı Adı</label>
+        <input type="text" placeholder="@kullaniciadi" required>
+      </div>
+
+      <button type="submit">
+        ❤️ Başvuruyu Gönder
+      </button>
+
+    </form>
+
+  </div>
+
+</div>
+
+</body>
+</html>
 
